@@ -1,9 +1,9 @@
 def stage_name
 properties([
    parameters([
-    string(name: 'ip_server', defaultValue: '10.1.0.7', description: 'ip_addres'),
-    string(name: 'ACCESS_KEY_ID', defaultValue: 'AKIA4QDUZQ7LHAVX6KFN', description: 'KEYS'),
-    string(name: 'SECRET_ACCESS_KEY', defaultValue: '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', description: 'secret access key')
+    string(name: 'ip_server', defaultValue: '', description: 'ip_addres'),
+    string(name: 'ACCESS_KEY_ID', defaultValue: '', description: 'KEYS'),
+    string(name: 'SECRET_ACCESS_KEY', defaultValue: '', description: 'secret access key')
    ])
 ])
 node("maorsslave"){
