@@ -22,15 +22,5 @@ node("maorsslave"){
             sh """sshpass -p ${PASSWORD} ssh ${USERNAME}@${params.ip_server} -o StrictHostKeyChecking=no << EOF
             bash install_app.sh"""
         }
-        stage("test"){
-            def test = sh(returnStdout: true, script: 'curl localhost:8082 &> /dev/null && echo $?').trim() 
-            if (test != '0' ){
-                error("Build failed webserver is down..")
-            }
-            else{
-                println("the web server is up")
-            }
-            
-        }
     }
 }
