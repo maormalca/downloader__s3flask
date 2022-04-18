@@ -1,4 +1,3 @@
-def stage_name
 properties([
    parameters([
     string(name: 'ip_server', defaultValue: '', description: 'ip_addres'),
